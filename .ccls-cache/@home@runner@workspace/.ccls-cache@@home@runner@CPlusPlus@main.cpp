@@ -4,13 +4,15 @@ using namespace std;
 
 int main()
 {
-  char first, middle, last;
-  //store your initials in the variables
-  first = 'L';
-  middle = 'H';
-  last = 'E';
+  string name, address, phoneNumber;
+  //store your information in the variables
+  name = "Levi Everitt";
+  address = "123 Main St";
+  phoneNumber = "757-123-4567";
 
-  cout << first << middle << last;
+  cout << name << endl;
+  cout << address << endl;
+  cout << phoneNumber << endl;
   return 0;
 }
   

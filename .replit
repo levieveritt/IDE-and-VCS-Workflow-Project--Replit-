@@ -3,6 +3,7 @@ compile = "make -s"
 run = "./main"
 entrypoint = "main.cpp"
 hidden = ["main", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
+modules = ["cpp-clang14"]
 
 [nix]
 channel = "stable-24_05"
@@ -70,3 +71,26 @@ start = "ccls"
 
 [agent]
 expertMode = true
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "C++ Build and Run"
+
+[[workflows.workflow]]
+name = "C++ Build and Run"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "clang++ -o main main.cpp && ./main"
+
+[workflows.workflow.metadata]
+outputType = "console"
