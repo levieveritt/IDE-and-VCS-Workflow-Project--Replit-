@@ -1,3 +1,15 @@
 #include <iostream>
 
-int main() { std::cout << "Hello World!\n"; }
+using namespace std;
+
+int main()
+{
+  char first, middle, last;
+  //store your information in the variables
+  first = 'L';
+  middle = 'H';
+  last = 'E';
+
+  cout << first << middle << last <<endl;
+  return 0;
+}
