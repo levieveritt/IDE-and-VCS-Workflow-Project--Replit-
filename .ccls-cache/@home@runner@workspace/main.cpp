@@ -11,11 +11,11 @@ double getCelsius(int fahrenheit) {
 }
 
 int main() {
-    // Print the table name
+    // Print name
     cout << "Celcius Temperature Table" << endl;
     cout << "-------------------------" << endl;
 
-    // Print column labels
+    // Print labels
     cout << setw(12) << "Fahrenheit" << setw(12) << "Celsius" << endl;
 
     // Loop and print
