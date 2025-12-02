@@ -17,22 +17,22 @@ int main() {
     char continueCalculation;
 
     do {
-        // Get input from the user
+        // Get input
         cout << "Enter the length of the rectangle: ";
         cin >> length;
 
         cout << "Enter the width of the rectangle: ";
         cin >> width;
 
-        // Calculate the perimeter and area
+        // perimeter and area
         double perimeter = calculatePerimeter(length, width);
         double area = calculateArea(length, width);
 
-        // Display the results
+        // results
         cout << "Perimeter: " << perimeter << endl;
         cout << "Area: " << area << endl;
 
-        // Ask if the user wants to process another rectangle
+        // ask to repeat
         cout << "Do you want to process another rectangle? (y/n): ";
         cin >> continueCalculation;
 
